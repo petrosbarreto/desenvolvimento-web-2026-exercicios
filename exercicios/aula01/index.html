@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> <!-- DOCTYPE correto -->
+<html lang="pt-BR"> <!-- "Lang="pt-BR" -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seu Nome - Página de Apresentação</title>
+  <title>Kauã Filipe - Página de Apresentação</title>
   <style>
     /* CSS opcional - você pode personalizar! */
     body {
@@ -12,6 +12,10 @@
       margin: 0 auto;
       padding: 20px;
       line-height: 1.6;
+      background-position: center;
+      background-image: url("b3IuanBn.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
     }
     header {
       text-align: center;
@@ -29,8 +33,10 @@
       width: 100%;
       border-collapse: collapse;
     }
-    th, td {
-      border: 1px solid #ddd;
+    
+    /*Techo modificado para o visual*/
+    td {
+      border: 1px solid #0066cc;
       padding: 10px;
       text-align: left;
     }
@@ -45,6 +51,19 @@
       margin-top: 40px;
       color: #666;
     }
+
+    /* parte de css opcional, decidi fazer um separação do fundo*/
+    .container{
+      background-color: #ddd;
+      padding:30px;
+      margin: 50px auto;
+      max-width: 1500px;
+      border-radius: 10px;
+      box-sizing: #0066cc;
+
+    }
+
+
   </style>
 </head>
 <body>
@@ -61,10 +80,13 @@
     DICA: Use o DevTools (F12) para ver como ficou!
   -->
 
+  <div class="container">
+  
   <header>
-    <h1>Seu Nome Completo</h1>
-    <h2>Sua Profissão / Curso</h2>
-    <img src="https://via.placeholder.com/150" alt="Foto de [Seu Nome]" width="150" height="150">
+    <h1 style="font-size:50px">Kauã Filipe Moreno Marques</h1> <!-- 1-->
+    <h2>Cursando: Sistemas de informação 👨‍💻</h2>  <!-- 2-->
+    <h2>Área de interesse: engenharia de dados ⚙️</h2> 
+    <img src="imgtest.png" alt="Foto de [kfmm]" width="150" height="150"> <!-- 3 -->
   </header>
 
   <main>
@@ -72,23 +94,26 @@
       <h2>Sobre Mim</h2>
       <p>
         <!-- TODO: Escreva um parágrafo sobre você -->
-        Fale sobre você aqui...
+        Estudante de Sistemas de Informação com interesse em desenvolvimento back-end, APIs e bancos de dados.
+        Busco oportunidade de estágio para aplicar na prática meus conhecimentos e evoluir em um ambiente de
+        trabalho, com foco em boas práticas de desenvolvimento, versionamento.
+
       </p>
 
       <h3>Meus Hobbies</h3>
       <ul>
         <!-- TODO: Liste 3 hobbies -->
-        <li>Hobby 1</li>
-        <li>Hobby 2</li>
-        <li>Hobby 3</li>
+        <li>Pesquisas sobre História1</li>
+        <li>Estudar sobre a área de tecnologia</li>
+        <li>ler e jogar</li>
       </ul>
 
       <h3>Objetivos Profissionais</h3>
       <ol>
         <!-- TODO: Liste 3 objetivos -->
-        <li>Objetivo 1</li>
-        <li>Objetivo 2</li>
-        <li>Objetivo 3</li>
+        <li>Ser uma pessoa estudiosa</li>
+        <li>Procurar ser bem sucedido</li>
+        <li>Entendeer eu mesmo</li>
       </ol>
     </section>
 
@@ -104,24 +129,24 @@
         <tbody>
           <!-- TODO: Adicione pelo menos 5 habilidades -->
           <tr>
-            <td>HTML</td>
+            <td>HTML,CSS,JAVASCRIPT</td>
             <td>Iniciante</td>
           </tr>
           <tr>
-            <td>CSS</td>
+            <td>Python</td>
+            <td>Intermediário</td>
+          </tr>
+          <tr>
+            <td>C,C++</td>
             <td>Iniciante</td>
           </tr>
           <tr>
-            <td>JavaScript</td>
+            <td>Git,GitHub</td>
             <td>Iniciante</td>
           </tr>
           <tr>
-            <td>Git</td>
-            <td>Iniciante</td>
-          </tr>
-          <tr>
-            <td>Outra habilidade</td>
-            <td>Seu nível</td>
+            <td>SQL</td>
+            <td>Intermediário</td>
           </tr>
         </tbody>
       </table>
@@ -131,15 +156,16 @@
       <h2>Contato</h2>
       <ul>
         <!-- TODO: Atualize com seus links reais (pode usar # se não tiver) -->
-        <li>Email: <a href="mailto:seuemail@example.com">seuemail@example.com</a></li>
-        <li>GitHub: <a href="https://github.com/seuusuario" target="_blank">@seuusuario</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/seuperfil" target="_blank">Seu Nome</a></li>
+        <li>Email: <a href="kauamorenofilipe123@gmail.com">kauamorenofilipe123@gmail.com </a></li>
+        <li>GitHub: <a href="https://github.com/KFelipe1M" target="_blank">KFelipe1M</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/kau%C3%A3filipe/" target="_blank">Linkedin </a></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Seu Nome. Feito com ❤️ no curso de Desenvolvimento Web - UNINASSAU.</p>
+    <p>&copy; 2026 KauãFilipe. Feito com ❤️ no curso de Desenvolvimento Web - UNINASSAU.</p>
   </footer>
+  </div>
 </body>
 </html>
