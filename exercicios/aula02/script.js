@@ -1,52 +1,51 @@
-// TODO: Implemente as funções abaixo
-
 const API_URL = 'https://jsonplaceholder.typicode.com';
 
-// Carregar usuários
+// 1. Carregar usuários (GET)
 async function carregarUsuarios() {
   const startTime = Date.now();
   const loading = document.getElementById('loading');
   const container = document.getElementById('usuarios-container');
   
   try {
-    // TODO: Implementar fetch GET
-    // 1. Mostrar loading
+    // Mostrar loading e limpar container
     loading.classList.remove('hidden');
     container.innerHTML = '';
     
-    // 2. Fazer requisição
-    // const response = await fetch(`${API_URL}/users`);
+    // Fazer requisição GET
+    const response = await fetch(`${API_URL}/users`);
     
-    // 3. Verificar status
-    // if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    // Verificar se a resposta é ok (status 200-299)
+    if (!response.ok) throw new Error(`Erro HTTP: ${response.status}`);
     
-    // 4. Processar resposta
-    // const usuarios = await response.json();
+    const usuarios = await response.json();
     
-    // 5. Exibir usuários
-    // usuarios.forEach(user => {
-    //   const card = document.createElement('div');
-    //   card.className = 'user-card';
-    //   card.innerHTML = `...`;
-    //   container.appendChild(card);
-    // });
+    // Exibir usuários dinamicamente
+    usuarios.forEach(user => {
+      const card = document.createElement('div');
+      card.className = 'user-card';
+      card.innerHTML = `
+        <h3>👤 ${user.name}</h3>
+        <p><strong>Email:</strong> ${user.email}</p>
+        <p><strong>Cidade:</strong> ${user.address.city}</p>
+      `;
+      container.appendChild(card);
+    });
     
-    // 6. Esconder loading
-    loading.classList.add('hidden');
-    
-    // 7. Atualizar info
+    // Atualizar informações da requisição
     const endTime = Date.now();
-    // atualizarInfo('GET', `${API_URL}/users`, response.status, endTime - startTime);
+    atualizarInfo('GET', `${API_URL}/users`, response.status, endTime - startTime);
     
   } catch (error) {
+    container.innerHTML = `<p class="error">❌ Erro ao carregar: ${error.message}</p>`;
+  } finally {
+    // Esconder loading independente de sucesso ou erro
     loading.classList.add('hidden');
-    container.innerHTML = `<p class="error">❌ Erro: ${error.message}</p>`;
   }
 }
 
-// Criar post
+// 2. Criar post (POST)
 async function criarPost(event) {
-  event.preventDefault();
+  event.preventDefault(); // Impede o recarregamento da página
   const startTime = Date.now();
   
   const titulo = document.getElementById('titulo').value;
@@ -54,43 +53,45 @@ async function criarPost(event) {
   const resultado = document.getElementById('post-resultado');
   
   try {
-    // TODO: Implementar fetch POST
-    // 1. Fazer requisição POST
-    // const response = await fetch(`${API_URL}/posts`, {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({
-    //     title: titulo,
-    //     body: conteudo,
-    //     userId: 1
-    //   })
-    // });
+    // Fazer requisição POST
+    const response = await fetch(`${API_URL}/posts`, {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json; charset=UTF-8' 
+      },
+      body: JSON.stringify({
+        title: titulo,
+        body: conteudo,
+        userId: 1
+      })
+    });
+
+    if (!response.ok) throw new Error(`Erro ao postar: ${response.status}`);
     
-    // 2. Processar resposta
-    // const data = await response.json();
+    const data = await response.json();
     
-    // 3. Exibir confirmação
-    // resultado.innerHTML = `
-    //   <div class="success">
-    //     ✅ Post criado com sucesso!<br>
-    //     ID: ${data.id}<br>
-    //     Status: ${response.status}
-    //   </div>
-    // `;
+    // Exibir confirmação
+    resultado.innerHTML = `
+      <div class="success">
+        ✅ Post criado com sucesso!<br>
+        <strong>ID do Post:</strong> ${data.id}<br>
+        <strong>Status:</strong> ${response.status}
+      </div>
+    `;
     
-    // 4. Limpar formulário
-    // event.target.reset();
+    // Limpar formulário
+    event.target.reset();
     
-    // 5. Atualizar info
+    // Atualizar info
     const endTime = Date.now();
-    // atualizarInfo('POST', `${API_URL}/posts`, response.status, endTime - startTime);
+    atualizarInfo('POST', `${API_URL}/posts`, response.status, endTime - startTime);
     
   } catch (error) {
     resultado.innerHTML = `<p class="error">❌ Erro: ${error.message}</p>`;
   }
 }
 
-// Atualizar informações da requisição
+// 3. Atualizar painel de informações
 function atualizarInfo(metodo, url, status, tempo) {
   document.getElementById('info-metodo').textContent = metodo;
   document.getElementById('info-url').textContent = url;
@@ -98,7 +99,7 @@ function atualizarInfo(metodo, url, status, tempo) {
   document.getElementById('info-tempo').textContent = `${tempo}ms`;
 }
 
-// Helper: obter texto do status code
+// Helper: obter texto amigável do status code
 function getStatusText(code) {
   const statusTexts = {
     200: 'OK',
@@ -107,7 +108,7 @@ function getStatusText(code) {
     404: 'Not Found',
     500: 'Internal Server Error'
   };
-  return statusTexts[code] || '';
+  return statusTexts[code] || 'Unknown';
 }
 
 // Event listeners
