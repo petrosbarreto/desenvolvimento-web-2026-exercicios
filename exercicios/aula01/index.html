@@ -1,158 +1,209 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Metadados obrigatórios -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vagner Henrique da Silva - Página de Apresentação</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Título descritivo da página -->
+  <title>Matheus Henrique Macêdo Costa | Portfólio Acadêmico</title>
+
   <style>
+    /* ===== CONFIGURAÇÃO GERAL ===== */
     body {
       font-family: Arial, sans-serif;
-      max-width: 870px;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 25px;
-      line-height: 1.6;
-      background-color: #292626;
-      color: #fff;
+      padding: 20px;
+      background-color: #1e102a;
+      color: #e6e6e6;
     }
-    header {
-      text-align: center;
-      padding: 3px 0;
-      border-bottom: 2px solid #333;
+
+    /* ===== TOPO DA PÁGINA ===== */
+    .header-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
     }
-    img {
+
+    /* Imagem de perfil */
+    .profile-img {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      border: 3px solid #850303;
+      object-fit: cover;
+      border: 3px solid #2e8b57;
     }
+
+    /* Agrupamento textual do cabeçalho */
+    .header-text h1 {
+      margin-bottom: 5px;
+    }
+
+    .header-text p {
+      margin: 0;
+      font-weight: bold;
+      color: #bbbbbb;
+    }
+
+    /* ===== CONTEÚDO PRINCIPAL ===== */
     section {
-      margin: 30px 0;
+      background: #2a1838;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
+
+    h2 {
+      border-left: 4px solid #2e8b57;
+      padding-left: 8px;
+    }
+
+    /* ===== TABELA ===== */
     table {
       width: 100%;
       border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #505050;
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background-color: #850303;
-      color: #e6e6e6;
-    }
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      border-top: 2px solid #333;
-      margin-top: 40px;
-      color: #666;
+      margin-top: 10px;
     }
 
+    table, th, td {
+      border: 1px solid #3a2a4d;
+    }
+
+    th {
+      background-color: #2e8b57;
+      color: white;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+
+    /* ===== LINKS ===== */
     a {
-      color: #9c2424;
+      color: #b35c1e;
       text-decoration: none;
     }
 
     a:hover {
-      color: #8b1414;
       text-decoration: underline;
+    }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #bbbbbb;
     }
   </style>
 </head>
-<body>
-   <button id="theme-toggle" style="position: fixed; top: 20px; right: 20px; padding: 10px; cursor: pointer; border-radius: 8px;">
-  🌓 Trocar Tema
-   </button>
-  <!-- 
-    TODO: Complete este template com suas informações!
-    
-    INSTRUÇÕES:
-    1. Substitua "Seu Nome" pelo seu nome real
-    2. Substitua a URL da imagem por uma sua (ou use https://via.placeholder.com/150)
-    3. Preencha todas as seções com suas informações reais
-    4. Mantenha a estrutura HTML pedida
-    5. Personalize o CSS se quiser!
-    
-    DICA: Use o DevTools (F12) para ver como ficou!
-  -->
 
-  <header>
-    <h1>Vagner Henrique da Silva</h1>
-    <h2>Engenharia da Computação 💻</h2>
-    <img src="https://media.licdn.com/dms/image/v2/D4E03AQF6gFK6ZM0yNA/profile-displayphoto-scale_200_200/B4EZxTs4NqIgAY-/0/1770930802421?e=1773273600&v=beta&t=Hqas-l6Gm2RXTuClJpNlEgKpXaxgOUws8oefXLZR3KA" alt="Foto de Vagner Henrique da Silva" width="150" height="150">
+<body>
+
+  <!-- Cabeçalho com agrupamento semântico -->
+  <header class="header-container">
+    <img 
+      src="https://media.licdn.com/dms/image/v2/D4D03AQFC6cmWL4QvGA/profile-displayphoto-crop_800_800/B4DZyRvtTYGQAI-/0/1771971730455?e=1773273600&v=beta&t=xisRxWuRFAEx-0py-a3XiGIZ6km70QkMLqxR-89uzH4"
+      alt="Foto de perfil de Matheus Henrique Macêdo Costa"
+      class="profile-img">
+
+    <!-- Agrupamento textual organizado -->
+    <div class="header-text">
+      <h1>Matheus Henrique Macêdo Costa</h1>
+      <p>Estudante de Sistemas de Informação</p>
+    </div>
   </header>
 
+  <!-- Conteúdo principal da página -->
   <main>
+
+    <!-- Seção de apresentação -->
     <section>
       <h2>Sobre Mim</h2>
       <p>
-        Meu nome é Vagner Henrique da Silva, estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e inovação. 
-        Tenho interesse em desenvolvimento web, análise de dados e soluções que impactem positivamente a experiência do usuário.
-        Estou em constante aprendizado, buscando aprimorar minhas habilidades técnicas e práticas de programação, além de colaborar em projetos desafiadores.
+        Sou estudante de Sistemas de Informação na UNINASSAU, iniciando minha
+        trajetória no desenvolvimento web e com forte interesse em tecnologia,
+        inovação e inteligência artificial.
       </p>
 
-      <h3>Meus Hobbies</h3>
+      <h3>Hobbies</h3>
       <ul>
-        <li>Tocar instrumentos</li>
-        <li>Jogar vôlei</li>
-        <li>Estudar</li>
+        <li>🎮 Adoro jogar videogame</li>
+        <li>📚 Gosto de ler livros de Ficção científica</li>
+        <li>🏃 Faço corridas ao ar livre</li>
       </ul>
 
       <h3>Objetivos Profissionais</h3>
       <ol>
-        <li>Conseguir um estágio</li>
-        <li>Trabalhar e morar no exterior</li>
-        <li>Atuar na área de Engenharia de Dados</li>
+        <li>Ingressar no mercado de tecnologia</li>
+        <li>Atuar em uma grande empresa do setor</li>
+        <li>Contribuir em projetos de Inteligência Artificial</li>
       </ol>
     </section>
 
+    <!-- Seção de habilidades -->
     <section>
       <h2>Habilidades Técnicas</h2>
+
+      <!-- Tabela estruturada corretamente -->
       <table>
         <thead>
           <tr>
-            <th>Habilidade</th>
-            <th>Nível</th>
+            <th scope="col">Habilidade</th>
+            <th scope="col">Nível</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Python</td>
-            <td>Intermediário</td>
-          </tr>
-          <tr>
-            <td>Edição de imagem</td>
-            <td>Intermediário</td>
-          </tr>
           <tr>
             <td>HTML</td>
             <td>Iniciante</td>
           </tr>
           <tr>
-            <td>SQL</td>
+            <td>CSS</td>
+            <td>Iniciante</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Iniciante</td>
+          </tr>
+          <tr>
+            <td>Git</td>
+            <td>Iniciante</td>
+          </tr>
+          <tr>
+            <td>Python</td>
             <td>Intermediário</td>
           </tr>
           <tr>
             <td>Inglês</td>
-            <td>Intermediário</td>
+            <td>Avançado</td>
           </tr>
         </tbody>
       </table>
     </section>
 
+    <!-- Seção de contato -->
     <section>
       <h2>Contato</h2>
-      <ul>
-        <li>Email: <a href="mailto:vagnerhenriquesilva0803@gmail.com">vagnerhenriquesilva0803@gmail.com</a></li>
-        <li>GitHub: <a href="https://github.com/VagnerH" target="_blank">@VagnerH</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/vagner-henrique-da-silva-4b07823ab/" target="_blank">Vagner Henrique da Silva</a></li>
-      </ul>
+      <address>
+        <ul>
+          <li>Email: <a href="mailto:matheushenriquemc2009@hotmail.com">matheushenriquemc2009@hotmail.com</a></li>
+          <li>GitHub: <a href="https://github.com/matheush0782" target="_blank" rel="noopener">matheush0782</a></li>
+          <li>LinkedIn: <a href="https://linkedin.com/in/matheushmcosta" target="_blank" rel="noopener">Link para perfil</a></li>
+        </ul>
+      </address>
     </section>
+
   </main>
 
+  <!-- Rodapé informativo -->
   <footer>
-    <p>&copy; 2026 Vagner Henrique. Feito com ❤️ no curso de Desenvolvimento Web - UNINASSAU.</p>
+    <p>&copy; 2026 Matheus Henrique Macêdo Costa. Feito com ❤️ no curso de Desenvolvimento Web 2026.1 - UNINASSAU.</p>
   </footer>
-  <script src="script.js"></script>
+
 </body>
 </html>
