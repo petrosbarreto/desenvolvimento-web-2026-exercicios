@@ -1,4 +1,4 @@
-// Muda entre dark e light mode
+//Muda entre dark e light mode
 const toggleTheme=document.getElementById('toggle-theme');
 
 const rootHtml = document.documentElement;
