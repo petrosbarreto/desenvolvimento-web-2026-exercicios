@@ -1,3 +1,23 @@
+/* Tema Light /Tema padrão*/
+:root, :root[data-theme='light']{
+  --bg-color: #f0f2f5;
+  --section-bg: #ffffff;
+  --text-color:#333333;
+  --header-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --card-bg: #f8f9fa;
+  --border-color: #e0e0e0;
+}
+
+/*Tema Dark*/
+:root[data-theme='dark']{
+  --bg-color: #121212;
+  --section-bg: #1e1e1e;
+  --text-color:#e0e0e0;
+  --header-gradient: linear-gradient(135deg, #2f4862 0%, #27164a 100%);
+  --card-bg: #2d2d2d;
+  --border-color: #444444;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,13 +30,13 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background: #f0f2f5;
+  background: var(--bg-color);
 }
 
 header {
   text-align: center;
   padding: 30px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--header-gradient);
   color: white;
   border-radius: 15px;
   margin-bottom: 30px;
@@ -33,14 +53,14 @@ main {
 }
 
 section {
-  background: white;
+  background:var(--card-bg);
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 section h2 {
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 2px solid #667eea;
@@ -69,6 +89,10 @@ button:active {
   transform: translateY(0);
 }
 
+#toggle-theme{
+  margin-top: 5%;
+}
+
 /* Loading */
 #loading {
   text-align: center;
@@ -90,7 +114,7 @@ button:active {
 }
 
 .user-card {
-  background: #f8f9fa;
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 10px;
   border-left: 4px solid #667eea;
@@ -103,12 +127,12 @@ button:active {
 }
 
 .user-card h3 {
-  color: #333;
+  color:var(--text-color);
   margin-bottom: 10px;
 }
 
 .user-card p {
-  color: #666;
+  color:var(--text-color);
   font-size: 0.9rem;
   margin: 5px 0;
 }
@@ -122,13 +146,13 @@ form {
 
 label {
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
 }
 
 input[type="text"],
 textarea {
   padding: 12px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--border-color);
   border-radius: 8px;
   font-family: inherit;
   font-size: 1rem;
@@ -167,7 +191,7 @@ textarea {
 
 /* Info da requisição */
 #requisicao-info {
-  background: #f8f9fa;
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 8px;
   border-left: 4px solid #28a745;
@@ -179,13 +203,13 @@ textarea {
 }
 
 #requisicao-info strong {
-  color: #333;
+  color: var(--text-color);
   display: inline-block;
   min-width: 80px;
 }
 
 #requisicao-info span {
-  color: #666;
+  color: var(--text-color);
   font-family: 'Courier New', monospace;
 }
 
