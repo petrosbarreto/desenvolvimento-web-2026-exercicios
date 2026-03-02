@@ -1,18 +1,5 @@
-// Muda entre dark e light mode
-const toggleTheme=document.getElementById('toggle-theme');
-
-const rootHtml = document.documentElement;
-
-function changeTheme(){
-  const currentTheme = rootHtml.getAttribute("data-theme")
-
-  if(currentTheme === "light") rootHtml.setAttribute("data-theme", "dark")
-    else rootHtml.setAttribute("data-theme", "light")
-}
-
-toggleTheme.addEventListener("click", changeTheme);
-
 // TODO: Implemente as funções abaixo
+
 const API_URL = 'https://jsonplaceholder.typicode.com';
 
 // Carregar usuários
@@ -28,33 +15,28 @@ async function carregarUsuarios() {
     container.innerHTML = '';
     
     // 2. Fazer requisição
-    const response = await fetch(`${API_URL}/users`);
-
+    // const response = await fetch(`${API_URL}/users`);
+    
     // 3. Verificar status
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    // if (!response.ok) throw new Error(`HTTP ${response.status}`);
     
     // 4. Processar resposta
-    const usuarios = await response.json();
+    // const usuarios = await response.json();
     
-    // 5. Exibir usuários (Criação denamica de cards)
-    usuarios.forEach(user => {
-      const card = document.createElement('div');
-      card.className = 'user-card';
-      //Mudança aqui para exibir informações
-      card.innerHTML = `
-      <h3>${user.name}</h3>
-      <p>Email: ${user.email}</p>
-      <p>Cidade: ${user.address.city}</p>`;
-
-      container.appendChild(card);
-    });
+    // 5. Exibir usuários
+    // usuarios.forEach(user => {
+    //   const card = document.createElement('div');
+    //   card.className = 'user-card';
+    //   card.innerHTML = `...`;
+    //   container.appendChild(card);
+    // });
     
     // 6. Esconder loading
     loading.classList.add('hidden');
     
     // 7. Atualizar info
     const endTime = Date.now();
-    atualizarInfo('GET', `${API_URL}/users`, response.status, endTime - startTime);
+    // atualizarInfo('GET', `${API_URL}/users`, response.status, endTime - startTime);
     
   } catch (error) {
     loading.classList.add('hidden');
@@ -64,7 +46,7 @@ async function carregarUsuarios() {
 
 // Criar post
 async function criarPost(event) {
-  event.preventDefault(); //Evita que a página recarregue
+  event.preventDefault();
   const startTime = Date.now();
   
   const titulo = document.getElementById('titulo').value;
@@ -74,34 +56,34 @@ async function criarPost(event) {
   try {
     // TODO: Implementar fetch POST
     // 1. Fazer requisição POST
-    const response = await fetch(`${API_URL}/posts`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        title: titulo,
-        body: conteudo,
-        userId: 1
-      })
-    });
+    // const response = await fetch(`${API_URL}/posts`, {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({
+    //     title: titulo,
+    //     body: conteudo,
+    //     userId: 1
+    //   })
+    // });
     
     // 2. Processar resposta
-    const data = await response.json();
+    // const data = await response.json();
     
-    //3. Exibir confirmação
-    resultado.innerHTML = `
-      <div class="success">
-        ✅ Post criado com sucesso!<br>
-        ID: ${data.id}<br>
-        Status: ${response.status}
-      </div>
-    `;
+    // 3. Exibir confirmação
+    // resultado.innerHTML = `
+    //   <div class="success">
+    //     ✅ Post criado com sucesso!<br>
+    //     ID: ${data.id}<br>
+    //     Status: ${response.status}
+    //   </div>
+    // `;
     
     // 4. Limpar formulário
-    event.target.reset();
+    // event.target.reset();
     
     // 5. Atualizar info
     const endTime = Date.now();
-    atualizarInfo('POST', `${API_URL}/posts`, response.status, endTime - startTime);
+    // atualizarInfo('POST', `${API_URL}/posts`, response.status, endTime - startTime);
     
   } catch (error) {
     resultado.innerHTML = `<p class="error">❌ Erro: ${error.message}</p>`;
