@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vagner Henrique da Silva - Página de Apresentação</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Bruna Freitas - Página de Apresentação</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 870px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      max-width: 800px;
       margin: 0 auto;
       padding: 25px;
       line-height: 1.6;
@@ -22,7 +21,7 @@
     }
     img {
       border-radius: 50%;
-      border: 3px solid #850303;
+      border: 3px solid #4d4e50;
     }
     section {
       margin: 30px 0;
@@ -32,13 +31,13 @@
       border-collapse: collapse;
     }
     th, td {
-      border: 1px solid #505050;
+      border: 1px solid #667294;
       padding: 10px;
       text-align: left;
     }
     th {
-      background-color: #850303;
-      color: #e6e6e6;
+      background-color: #667294;
+      color: white;
     }
     footer {
       text-align: center;
@@ -47,22 +46,16 @@
       margin-top: 40px;
       color: #666;
     }
-
-    a {
-      color: #9c2424;
-      text-decoration: none;
+    #sobre{
+      text-align: justify;
     }
-
-    a:hover {
-      color: #8b1414;
-      text-decoration: underline;
+    .seção{
+      border-bottom: 2px solid #dbdbde;
+      padding-bottom: 20px;
     }
   </style>
 </head>
 <body>
-   <button id="theme-toggle" style="position: fixed; top: 20px; right: 20px; padding: 10px; cursor: pointer; border-radius: 8px;">
-  🌓 Trocar Tema
-   </button>
   <!-- 
     TODO: Complete este template com suas informações!
     
@@ -77,36 +70,40 @@
   -->
 
   <header>
-    <h1>Vagner Henrique da Silva</h1>
-    <h2>Engenharia da Computação 💻</h2>
-    <img src="https://media.licdn.com/dms/image/v2/D4E03AQF6gFK6ZM0yNA/profile-displayphoto-scale_200_200/B4EZxTs4NqIgAY-/0/1770930802421?e=1773273600&v=beta&t=Hqas-l6Gm2RXTuClJpNlEgKpXaxgOUws8oefXLZR3KA" alt="Foto de Vagner Henrique da Silva" width="150" height="150">
+    <h1>Bruna Freitas da Silva</h1>
+    <h2>Estudante / Sistemas de Informação</h2>
+    <img src="img/imagem-curriculo.png" alt="Foto de Bruna Freitas da Silva" width="150" height="150">
   </header>
 
   <main>
-    <section>
+    <section class="seção">
       <h2>Sobre Mim</h2>
-      <p>
-        Meu nome é Vagner Henrique da Silva, estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e inovação. 
-        Tenho interesse em desenvolvimento web, análise de dados e soluções que impactem positivamente a experiência do usuário.
-        Estou em constante aprendizado, buscando aprimorar minhas habilidades técnicas e práticas de programação, além de colaborar em projetos desafiadores.
+      <p id="sobre">
+        <!-- TODO: Escreva um parágrafo sobre você -->
+        Meu nome é Bruna Freitas da Silva, sou estudante do curso Sistemas de Informação na faculdade UNINASSAU. 
+        Tenho interesse em desenvolvimento back-end e atualmente estou buscando aprimorar minhas habilidades em JavaScript e aprender novas.
+        Estou sempre buscando me manter atualizada sobre as tendências da área com o objetivo de estar preparada para desafios
+        e poder contribuir de forma significativa em projetos futuros.
       </p>
 
       <h3>Meus Hobbies</h3>
       <ul>
-        <li>Tocar instrumentos</li>
-        <li>Jogar vôlei</li>
-        <li>Estudar</li>
+        <!-- TODO: Liste 3 hobbies -->
+        <li>Leitura de livros 📖</li>
+        <li>Escutar música 🎧</li>
+        <li>Culinária 🥣</li>
       </ul>
 
       <h3>Objetivos Profissionais</h3>
       <ol>
-        <li>Conseguir um estágio</li>
-        <li>Trabalhar e morar no exterior</li>
-        <li>Atuar na área de Engenharia de Dados</li>
+        <!-- TODO: Liste 3 objetivos -->
+        <li>Desenvolver projetos inovadores em tecnologia</li>
+        <li>Atuar e crescer em desenvolvimento back-end.</li>
+        <li>Atuar em equipes multidisciplinares</li>
       </ol>
     </section>
-
-    <section>
+   <!-- Adicione 5 habilidades -->
+    <section class="seção">
       <h2>Habilidades Técnicas</h2>
       <table>
         <thead>
@@ -133,7 +130,31 @@
             <td>Intermediário</td>
           </tr>
           <tr>
-            <td>Inglês</td>
+            <td>JavaScript</td>
+            <td>Iniciante</td>
+          </tr>
+          <tr>
+            <td>Git</td>
+            <td>Iniciante</td>
+          </tr>
+          <tr>
+            <td>SQL/Banco de dados</td>
+            <td>Iniciante</td>
+          </tr>
+          <tr>
+            <td>TypeScript</td>
+            <td>Iniciante</td>
+          </tr>
+          <tr>
+            <td>API Rest </td>
+            <td>Iniciante</td>
+          </tr>
+          <tr>
+            <td>Node.js</td>
+            <td>Iniciante</td>
+          </tr>
+          <tr>
+            <td>Microsoft Office</td>
             <td>Intermediário</td>
           </tr>
         </tbody>
@@ -143,16 +164,16 @@
     <section>
       <h2>Contato</h2>
       <ul>
-        <li>Email: <a href="mailto:vagnerhenriquesilva0803@gmail.com">vagnerhenriquesilva0803@gmail.com</a></li>
-        <li>GitHub: <a href="https://github.com/VagnerH" target="_blank">@VagnerH</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/vagner-henrique-da-silva-4b07823ab/" target="_blank">Vagner Henrique da Silva</a></li>
+        <!-- TODO: Atualize com seus links reais (pode usar # se não tiver) -->
+        <li>Email: <a href="mailto:brunasilva.sms@gmail.com">brunasilva.sms@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/BrunaSilva701 " target="_blank">@BrunaSilva701</a></li>
+        <li>LinkedIn: <a href="www.linkedin.com/in/bruna-freitasjob " target="_blank">Bruna Freitas</a></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Vagner Henrique. Feito com ❤️ no curso de Desenvolvimento Web - UNINASSAU.</p>
+    <p>&copy; 2026 Bruna Freitas da Silva. Feito com ❤️ no curso de Desenvolvimento Web - UNINASSAU.</p>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
