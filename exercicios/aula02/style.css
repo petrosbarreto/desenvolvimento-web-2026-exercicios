@@ -10,7 +10,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background: #f0f2f5;
+  background: #0D1117;
 }
 
 header {
@@ -33,14 +33,17 @@ main {
 }
 
 section {
-  background: white;
+  background: #151B23;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border: #373F48;
+  border-width: 0.2px;
+  border-style: solid;
 }
 
 section h2 {
-  color: #333;
+  color:aliceblue;
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 2px solid #667eea;
@@ -90,25 +93,26 @@ button:active {
 }
 
 .user-card {
-  background: #f8f9fa;
+  background:#2d3744;
   padding: 20px;
   border-radius: 10px;
   border-left: 4px solid #667eea;
   transition: transform 0.2s ease;
+  color: aliceblue;
 }
 
 .user-card:hover {
-  transform: translateX(5px);
+  transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .user-card h3 {
-  color: #333;
+  color: aliceblue;
   margin-bottom: 10px;
 }
 
 .user-card p {
-  color: #666;
+  color: aliceblue;
   font-size: 0.9rem;
   margin: 5px 0;
 }
@@ -122,23 +126,26 @@ form {
 
 label {
   font-weight: bold;
-  color: #333;
+  color: aliceblue;
 }
 
 input[type="text"],
 textarea {
   padding: 12px;
-  border: 2px solid #e0e0e0;
+  border: 1px solid #373F48;
   border-radius: 8px;
   font-family: inherit;
   font-size: 1rem;
   transition: border-color 0.3s ease;
+  background-color: #2d3744;
+  color: aliceblue;
 }
 
 input[type="text"]:focus,
 textarea:focus {
   outline: none;
   border-color: #667eea;
+  color: aliceblue;
 }
 
 textarea {
@@ -167,7 +174,7 @@ textarea {
 
 /* Info da requisição */
 #requisicao-info {
-  background: #f8f9fa;
+  background: #2d3744;
   padding: 20px;
   border-radius: 8px;
   border-left: 4px solid #28a745;
@@ -176,16 +183,17 @@ textarea {
 #requisicao-info p {
   margin: 10px 0;
   font-size: 0.95rem;
+  color: aliceblue;
 }
 
 #requisicao-info strong {
-  color: #333;
+  color: aliceblue;
   display: inline-block;
   min-width: 80px;
 }
 
 #requisicao-info span {
-  color: #666;
+  color: aliceblue;
   font-family: 'Courier New', monospace;
 }
 
