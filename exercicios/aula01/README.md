@@ -222,7 +222,7 @@ O bot verificará:
 
 ## ⏰ Prazo
 
-**Data limite:** 22/02/2026 23:59
+**Data limite:** 28/02/2026 23:59
 
 **Penalização por atraso:**
 - Até 2 dias: -10 pontos

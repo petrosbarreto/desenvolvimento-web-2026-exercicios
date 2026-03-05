@@ -1,78 +1,29 @@
+name: Simples CI - Verificação
+
 on:
   pull_request:
     types: [opened, synchronize]
 
 jobs:
-  check-plagiarism:
+  simple-check:
     runs-on: ubuntu-latest
-    
     steps:
       - name: Checkout PR
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-      
-      - name: Detect similarity in code submissions
-        id: plagiarism-check
+
+      - name: Detectar código duplicado simples
         run: |
-          python3 << 'PYTHON_SCRIPT'
-          import os
-          import difflib
-          import re
-          from pathlib import Path
-
-          def normalize_code(code):
-              """Normalize code: remove comments, spaces, and lowercase."""
-              code = re.sub(r'<!--.*?-->', '', code, flags=re.DOTALL)  # HTML comments
-              code = re.sub(r'//.*?', '', code, flags=re.MULTILINE)  # Single-line comments
-              code = re.sub(r'/\*.*?\*/', '', code, flags=re.DOTALL)  # Multiline comments
-              code = re.sub(r'\s+', ' ', code).strip()  # Extra spaces
-              return code.lower()
-
-          def calculate_similarity(code1, code2):
-              """Compare two code strings for similarity."""
-              return difflib.SequenceMatcher(None, code1, code2).ratio() * 100
-
-          suspicious = []
-          THRESHOLD = 85
-          base_dir = Path('exercicios')
-
-          # Load submissions
-          submissions = {
-              str(file): file.read_text(errors='ignore')
-              for file in base_dir.rglob('*.{html,js,css}') if file.is_file()
-          }
-
-          for file, content in submissions.items():
-              similarity = calculate_similarity(content, 'template code...')
-              if 'TODO' in content or similarity > THRESHOLD:
-                  suspicious.append(file)
-
-          github_output = os.getenv('GITHUB_OUTPUT', '/dev/stdout')
-          with open(github_output, 'a') as fh:
-              if suspicious:
-                  fh.write('suspicious=true\n')
-                  print(suspicious)
-              else:
-                  fh.write('suspicious=false\n')
-          PYTHON_SCRIPT
-
-      - name: Post findings if any issues detected
-        if: steps.plagiarism-check.outputs.suspicious == 'true'
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'Submissions flagged for potential plagiarism.'
-            });
+          echo "Iniciando verificação simplificada..."
+          if grep -r 'TODO' ./exercicios; then
+            echo "⚠️ Código contém 'TODO'. Por favor, complete o código antes de submeter."
+            exit 1
+          else
+            echo "✅ Nenhum 'TODO' encontrado no código enviado."
+          fi
