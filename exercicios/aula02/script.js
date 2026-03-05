@@ -9,7 +9,6 @@ async function carregarUsuarios() {
   const container = document.getElementById('usuarios-container');
   
   try {
-    // TODO: Implementar fetch GET
     // 1. Mostrar loading
     loading.classList.remove('hidden');
     container.innerHTML = '';
