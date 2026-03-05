@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vagner Henrique da Silva - Página de Apresentação</title>
+  <title> Weslley Siqueira Chaprão - Página de Apresentação</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -12,17 +12,18 @@
       margin: 0 auto;
       padding: 25px;
       line-height: 1.6;
-      background-color: #292626;
-      color: #fff;
+      background-color: #eedbdb;
+      color: #1b1a1a;
     }
+
     header {
       text-align: center;
       padding: 3px 0;
-      border-bottom: 2px solid #333;
+      border-bottom: 2px solid #5f5c5c;
     }
     img {
       border-radius: 50%;
-      border: 3px solid #850303;
+      border: 3px solid #1362d8;
     }
     section {
       margin: 30px 0;
@@ -37,7 +38,7 @@
       text-align: left;
     }
     th {
-      background-color: #850303;
+      background-color: #156c94;
       color: #e6e6e6;
     }
     footer {
@@ -57,12 +58,101 @@
       color: #8b1414;
       text-decoration: underline;
     }
+
+    :root {
+    --bg: #eedbdb;
+    --text: #1b1a1a;
+    --border: #5f5c5c;
+    --img-border: #1362d8;
+    --table-border: #505050;
+    --th-bg: #156c94;
+    --th-text: #e6e6e6;
+    --footer-border: #333;
+    --footer-text: #666;
+    --link: #9c2424;
+    --link-hover: #8b1414;
+  }
+
+  /* Tema Escuro */
+  body.dark {
+    --bg: #121212;
+    --text: #f1f1f1;
+    --border: #888;
+    --img-border: #4dabf7;
+    --table-border: #777;
+    --th-bg: #1f3a4a;
+    --th-text: #ffffff;
+    --footer-border: #888;
+    --footer-text: #aaa;
+    --link: #ff6b6b;
+    --link-hover: #ff8787;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 870px;
+    margin: 0 auto;
+    padding: 25px;
+    line-height: 1.6;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+  }
+
+  header {
+    text-align: center;
+    padding: 3px 0;
+    border-bottom: 2px solid var(--border);
+  }
+
+  img {
+    border-radius: 50%;
+    border: 3px solid var(--img-border);
+  }
+
+  section {
+    margin: 30px 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid var(--table-border);
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: var(--th-bg);
+    color: var(--th-text);
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid var(--footer-border);
+    margin-top: 40px;
+    color: var(--footer-text);
+  }
+
+  a {
+    color: var(--link);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+  }
   </style>
 </head>
 <body>
-   <button id="theme-toggle" style="position: fixed; top: 20px; right: 20px; padding: 10px; cursor: pointer; border-radius: 8px;">
-  🌓 Trocar Tema
-   </button>
+   <button id="theme-toggle"
+  style="position: fixed; top: 20px; right: 20px; padding: 10px; cursor: pointer; border-radius: 8px;">
+</button>
   <!-- 
     TODO: Complete este template com suas informações!
     
@@ -77,32 +167,37 @@
   -->
 
   <header>
-    <h1>Vagner Henrique da Silva</h1>
+    <h1>Weslley Siqueira Chaprão</h1>
     <h2>Engenharia da Computação 💻</h2>
-    <img src="https://media.licdn.com/dms/image/v2/D4E03AQF6gFK6ZM0yNA/profile-displayphoto-scale_200_200/B4EZxTs4NqIgAY-/0/1770930802421?e=1773273600&v=beta&t=Hqas-l6Gm2RXTuClJpNlEgKpXaxgOUws8oefXLZR3KA" alt="Foto de Vagner Henrique da Silva" width="150" height="150">
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQGO18lOV2pTCQ/profile-displayphoto-scale_400_400/B4DZxJi8UGHwAg-/0/1770760425197?e=1773878400&v=beta&t=dDot9ZUHLyGcC5kpOZvm037dseGFrIKlG9ptrZk1n2A" alt="Foto de Vagner Henrique da Silva" width="150" height="150">
   </header>
 
   <main>
     <section>
       <h2>Sobre Mim</h2>
       <p>
-        Meu nome é Vagner Henrique da Silva, estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e inovação. 
-        Tenho interesse em desenvolvimento web, análise de dados e soluções que impactem positivamente a experiência do usuário.
-        Estou em constante aprendizado, buscando aprimorar minhas habilidades técnicas e práticas de programação, além de colaborar em projetos desafiadores.
+        Meu nome é Weslley Siqueira Chaprão, Estudante de Engenharia da computação, tenho interesse em Desenvolvimento Web, desenvolvimento Back-end
+        e Banco de dados. Gosto de estudar as areas que me interesso, busco sempre me aperfeiçoar no que faço e sou muito dedicado. Sou comunicativo e ativo
+        gosto de trabalhar em equipe e tenho facilidade de aprender novas tecnologias.
+        
       </p>
 
       <h3>Meus Hobbies</h3>
       <ul>
-        <li>Tocar instrumentos</li>
-        <li>Jogar vôlei</li>
-        <li>Estudar</li>
+        <li>Jogar Videogame</li>
+        <li>Jogar Basquete</li>
+        <li>Correr</li>
+        <li>Tocar Trompete</li>
+        <li>Aprender coisas novas</li>
       </ul>
 
       <h3>Objetivos Profissionais</h3>
       <ol>
-        <li>Conseguir um estágio</li>
+        <li>Conseguir um estágio na area de tecnologia</li>
         <li>Trabalhar e morar no exterior</li>
         <li>Atuar na área de Engenharia de Dados</li>
+        <li>Atuar como programdor Java</li>
+        <li>Construir um Negocio de sucesso voltado para tecnologia</li>
       </ol>
     </section>
 
@@ -118,15 +213,15 @@
         <tbody>
           <tr>
             <td>Python</td>
-            <td>Intermediário</td>
+            <td>Basico</td>
           </tr>
           <tr>
-            <td>Edição de imagem</td>
-            <td>Intermediário</td>
+            <td>Node.js</td>
+            <td>iniciante</td>
           </tr>
           <tr>
             <td>HTML</td>
-            <td>Iniciante</td>
+            <td>Basico</td>
           </tr>
           <tr>
             <td>SQL</td>
@@ -134,7 +229,23 @@
           </tr>
           <tr>
             <td>Inglês</td>
-            <td>Intermediário</td>
+            <td>Basico</td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td>Iniciante</td>
+          </tr>
+          <tr>
+            <td>Excel/Sheets</td>
+            <td>Basico</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Iniciante</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>iniciante</td>
           </tr>
         </tbody>
       </table>
@@ -143,16 +254,52 @@
     <section>
       <h2>Contato</h2>
       <ul>
-        <li>Email: <a href="mailto:vagnerhenriquesilva0803@gmail.com">vagnerhenriquesilva0803@gmail.com</a></li>
-        <li>GitHub: <a href="https://github.com/VagnerH" target="_blank">@VagnerH</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/vagner-henrique-da-silva-4b07823ab/" target="_blank">Vagner Henrique da Silva</a></li>
+        <li>Email: <a href="mailto:wesleysiqueira455@gmail.com">Wesleysiqueira455@gmail.com</a></li>
+        <li>GitHub: <a href="https://https://github.com/Weslleysiqueira" target="_blank">@Weslleysiqueira</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/weslley-siqueira-chapr%C3%A3o-5ba3052aa/" target="_blank">Weslley Siqueira Chaprão</a></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Vagner Henrique. Feito com ❤️ no curso de Desenvolvimento Web - UNINASSAU.</p>
+    <p>&copy; 2026 Weslley Siqueira. Feito com ❤️ no curso de Desenvolvimento Web. - UNINASSAU.</p>
   </footer>
   <script src="script.js"></script>
+ <script>
+  const button = document.getElementById("theme-toggle");
+
+  function atualizarBotao() {
+    if (document.body.classList.contains("dark")) {
+      button.textContent = "☀️ Modo Claro";
+       button.style.backgroundColor="#1a1a1a";
+      button.style.color="white"
+    } else {
+      button.textContent = "🌙 Modo Escuro";
+      button.style.backgroundColor="White";
+      button.style.color="Black"
+    }
+  }
+
+  button.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+
+    atualizarBotao();
+  });
+
+  // Carregar tema salvo
+  window.onload = () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark");
+    }
+    atualizarBotao();
+  };
+</script>
 </body>
 </html>
