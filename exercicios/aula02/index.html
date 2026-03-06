@@ -14,7 +14,7 @@
   <main>
     <section id="usuarios-section">
       <h2>Lista de Usuários</h2>
-      <button id="btn-carregar">🔄 Carregar Usuários</button>
+      <button id="btn-carregar" type="button">🔄 Carregar Usuários</button>
       <div id="loading" class="hidden">Carregando...</div>
       <div id="usuarios-container"></div>
     </section>
@@ -24,10 +24,8 @@
       <form id="form-post">
         <label for="titulo">Título:</label>
         <input type="text" id="titulo" required>
-        
         <label for="conteudo">Conteúdo:</label>
         <textarea id="conteudo" required></textarea>
-        
         <button type="submit">📤 Enviar Post</button>
       </form>
       <div id="post-resultado"></div>
