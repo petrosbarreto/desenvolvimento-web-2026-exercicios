@@ -10,7 +10,10 @@
 </head>
 <body>
     <main class="bg-cyan-950 min-h-screen text-cyan-950 relative">
-        <section id="emailsContainer" class="p-8 flex flex-col gap-2"></section>
+        <section id="emailsContainer" class="p-8 flex flex-col gap-2">
+            <!-- Criar botão de deletar o e-mail -->
+            <!-- Criar campo de busca no historico  -->
+        </section>
         <section id="formArea" class="bg-gray-100 fixed bottom-0 w-full rounded-t-xl createEmailClosed">
             <div onclick="openCreateEmail()" class="flex justify-between items-center p-5">
                 <p class="text-lg font-semibold">Criar novo E-mail</p>
@@ -33,6 +36,7 @@
                 <div>
                     <label for="content">Conteúdo e-mail:</label>
                     <textarea name="content" id="emailContent" rows="10"></textarea>
+                    <!-- Fazer preview em tempo real -->
                 </div>
                 <div>
                     <label for="priority">Prioridade</label>

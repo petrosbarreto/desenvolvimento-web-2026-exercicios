@@ -37,7 +37,14 @@ const emails = [
     },
 ];
 
+const priorityColors = {
+    1: "bg-red-500",
+    2: "bg-orange-500",
+    3: "bg-green-500",
+}
+
 const getEmailTag = (email) => {
+    const colorClass = priorityColors[email.priority];
     return `
         <section class="grid grid-cols-[90%_10%] items-center bg-sky-50 rounded-lg overflow-hidden" onclick="openClosePreview()" data-id="${email.id}">
             <div class="min-w-0 mr-5 pl-3 py-2">
@@ -46,7 +53,7 @@ const getEmailTag = (email) => {
                     ${email.content}
                 </div>
             </div>
-            <div class="${email.priority === 1 ? "bg-red-500" : ""}${email.priority === 2 ? "bg-orange-500" : ""}${email.priority === 3 ? "bg-green-500" : ""} h-full" id="emailPriority"></div>
+            <div class="${colorClass} h-full" id="emailPriority"></div>
         </section>
 `;
 }
@@ -73,7 +80,15 @@ const openClosePreview = () => {
 createEmailForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const formData = new FormData(e.target);
+    const data = Object.fromEntries(new FormData(e.target));
 
+    // Adicionar a validação de e-mail
+    // Fazer o parse para tags HTML
+    // Criar o loading
+    // Salvar no localStorage
 
+    e.target.reset();
 })
+
+// Criar função para abrir o preview
+// Criar função para 
