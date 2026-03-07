@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Client</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<h1>Email Client</h1>
+
+<div class="container">
+
+<form id="emailForm">
+
+<label>De:</label>
+<input type="email" id="from" required>
+
+<label>Para:</label>
+<input type="text" id="to" required>
+
+<label>Cc:</label>
+<input type="text" id="cc">
+
+<label>Bcc:</label>
+<input type="text" id="bcc">
+
+<label>Assunto:</label>
+<input type="text" id="subject" required>
+
+<label>Mensagem:</label>
+<textarea id="body" required></textarea>
+
+<label>Prioridade:</label>
+<select id="priority">
+<option value="normal">Normal</option>
+<option value="alta">Alta</option>
+<option value="baixa">Baixa</option>
+</select>
+
+<div class="buttons">
+<button type="submit">Enviar</button>
+<button type="reset">Limpar</button>
+</div>
+
+<div id="status"></div>
+
+</form>
+
+<div class="preview">
+
+<h2>Preview</h2>
+
+<div id="previewContent"></div>
+
+</div>
+
+</div>
+
+<h2>Histórico</h2>
+
+<div id="history"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
