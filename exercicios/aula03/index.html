@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="bg-cyan-950 min-h-screen text-cyan-950 relative">
+        <section id="emailsContainer" class="p-8 flex flex-col gap-2">
+            <!-- Criar botão de deletar o e-mail -->
+            <!-- Criar campo de busca no historico  -->
+        </section>
+        <section id="formArea" class="bg-gray-100 fixed bottom-0 w-full rounded-t-xl createEmailClosed">
+            <div onclick="openCreateEmail()" class="flex justify-between items-center p-5">
+                <p class="text-lg font-semibold">Criar novo E-mail</p>
+                <i class="fa-solid fa-caret-up text-3xl mt-1"></i>
+            </div>
+
+            <form class="px-5 pb-10 text-lg flex flex-col gap-3" id="createEmailForm">
+                <div>
+                    <label for="sender">De:</label>
+                    <input class="border border-cyan-500" type="text" name="sender" id="emailSender" placeholder="fulano@email.com">
+                </div>
+                <div>
+                    <label for="receiver">Para:</label>
+                    <input type="text" name="receiver" id="emailreceiver" placeholder="fulano@gmail.com, ciclano@gmail.com ...">
+                </div>
+                <div>
+                    <label for="title">Título do e-mail:</label>
+                    <input type="text" name="title" id="emailTitle" placeholder="Assunto">
+                </div>
+                <div>
+                    <label for="content">Conteúdo e-mail:</label>
+                    <textarea name="content" id="emailContent" rows="10"></textarea>
+                    <!-- Fazer preview em tempo real -->
+                </div>
+                <div>
+                    <label for="priority">Prioridade</label>
+                    <select name="priority" id="emailPriority">
+                        <option value="1" selected>Normal</option>
+                        <option value="2">Alta</option>
+                        <option value="3">Baixa</option>
+                    </select>
+                </div>
+                <div class="grid grid-cols-2 gap-5 border text-white mt-5">
+                    <button onclick="openClosePreview()" type="button" class="bg-cyan-800 rounded-md p-3">Ver preview</button>
+                    <button type="submit" class="bg-cyan-800 rounded-md p-3">Enviar E-mail</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="emailPreview" class="absolute h-full top-0 items-center px-5 previewClosed" aria-modal="true" aria-labelledby="emailPreviewTitle">
+            <div class="absolute inset-0 bg-black/40" onclick="openClosePreview()"></div>
+            <div class="border-color-low bg-slate-50 grid gap-2 rounded-xl p-5 shadow-lg shadow-gray-900 relative">
+                <button class="absolute top-3 right-4" type="button" onclick="openClosePreview()" aria-label="Fechar visualização de e-mail">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+                <p id="emailPreviewTitle" class="font-bold">Assunto 1</p>
+                <p id="emailPreviewSender">
+                    <span class="font-bold">De:</span> fulano@gmail.com
+                </p>
+                <p id="emailPreviewReceiver" class="">
+                    <span class="font-bold">Para:</span> alfredo@gmail.com, alfredo@gmail.com, alfredo@gmail.com
+                </p>
+                <div class="bg-gray-300 rounded-md p-2">
+                    <p id="emailPreviewContent" class="text-justify">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, repellat deleniti! Deleniti in maiores voluptate minima aliquam sint libero, atque, temporibus dolor facere laborum nulla? A magnam rerum dolores consectetur? 
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

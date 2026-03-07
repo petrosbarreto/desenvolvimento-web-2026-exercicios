@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+:root {
+    --priority-normal-color: #f97316;
+    --priority-high-color: #ef4444;
+    --priority-low-color: #22c55e;
+}
+
+.border-color-normal {
+    border: 5px solid var(--priority-normal-color);
+}
+.border-color-high {
+    border: 5px solid var(--priority-high-color);
+}
+.border-color-low {
+    border: 5px solid var(--priority-low-color);
+}
+
+section.createEmailClosed {
+    transform: translateY(calc(100% - 80px));
+    transition: .5s ease-in-out;
+}
+
+section.createEmailOpened {
+    transform: translateY(0);
+    transition: .5s ease-in-out;
+}
+
+#createEmailForm div:has(input, textarea, select) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#createEmailForm input, #createEmailForm textarea, #createEmailForm select {
+    border: 1px solid #083344;
+    outline: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+} 
+
+#createEmailForm input:focus, #createEmailForm textarea:focus, #createEmailForm select:focus {
+    border: 3px solid #046b7d;
+    outline: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+} 
+
+.previewOpened {
+    opacity: 1;
+    display: flex;
+    transition: opacity .5s ease-in-out;
+
+    @starting-style {
+        opacity: 0;
+    }
+}
+
+.previewClosed {
+    opacity: 0;
+    display: none;
+}
