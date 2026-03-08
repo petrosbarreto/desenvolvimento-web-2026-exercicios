@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Client</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Cliente de Email</h1>
+
+<div class="container">
+
+<form id="emailForm">
+
+<div class="field">
+<label for="from">De</label>
+<input type="email" id="from" required>
+</div>
+
+<div class="field">
+<label for="to">Para</label>
+<input type="text" id="to" placeholder="email@email.com" required>
+</div>
+
+<div class="field hidden" id="ccField">
+<label for="cc">Cc</label>
+<input type="text" id="cc">
+</div>
+
+<div class="field hidden" id="bccField">
+<label for="bcc">Bcc</label>
+<input type="text" id="bcc">
+</div>
+
+<div class="field">
+<label for="subject">Assunto</label>
+<input type="text" id="subject">
+</div>
+
+<div class="field">
+<label for="priority">Prioridade</label>
+<select id="priority">
+<option value="normal">Normal</option>
+<option value="alta">Alta</option>
+<option value="baixa">Baixa</option>
+</select>
+</div>
+
+<div class="field">
+<label for="body">Mensagem</label>
+<textarea id="body"></textarea>
+</div>
+
+<div class="buttons">
+<button type="submit">Enviar</button>
+<button type="button" id="clearBtn">Limpar</button>
+</div>
+
+<div id="loading" class="loading hidden">
+<div class="spinner"></div>
+<span>Enviando email...</span>
+</div>
+
+</form>
+
+<div class="side">
+
+<h2>Preview</h2>
+<div id="preview"></div>
+
+<h2>Histórico</h2>
+<ul id="history"></ul>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
