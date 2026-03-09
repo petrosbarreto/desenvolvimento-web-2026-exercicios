@@ -37,24 +37,24 @@ Crie uma aplicação web que consome a API JSONPlaceholder e exibe:
 ## ✅ Requisitos Obrigatórios
 
 ### HTML
-- [x] Estrutura semântica (header, main, section, footer)
-- [x] Botão "Carregar Usuários"
-- [x] Formulário com validação
+V [x] Estrutura semântica (header, main, section, footer)
+V [x] Botão "Carregar Usuários"
+V [x] Formulário com validação
 - [x] Área para exibir resultados
-- [x] Indicador de loading
+V [x] Indicador de loading
 
 ### JavaScript
-- [x] Fetch API (não usar jQuery ou Axios)
-- [x] Função para GET (buscar usuários)
-- [x] Função para POST (criar post)
-- [x] Manipulação do DOM (criar elementos)
+V [x] Fetch API (não usar jQuery ou Axios)
+V [x] Função para GET (buscar usuários)
+V [x] Função para POST (criar post)
+V [x] Manipulação do DOM (criar elementos)
 - [x] Tratamento de erros (try/catch)
 - [x] Exibir status code
 
 ### CSS
-- [x] Cards ou tabela estilizada
-- [x] Botões com hover effect
-- [x] Loading spinner/animação
+V [x] Cards ou tabela estilizada
+V [x] Botões com hover effect
+V [x] Loading spinner/animação
 - [x] Responsivo (mobile-friendly)
 
 ---
