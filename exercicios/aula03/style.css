@@ -1,0 +1,86 @@
+body{
+    background-color: rgb(218, 221, 226);
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding: 20px;
+}
+
+#email{
+    background-color: rgb(252, 253, 253);
+    border-radius: 4px;
+    padding: 20px;
+    margin: 10px;
+}
+
+label{
+    display:block;
+    margin:5px;
+}
+
+input, textarea{
+    width: 100%;
+    padding:8px;
+}
+
+textarea{
+    height: 100px;
+}
+
+#preview{
+    background-color: rgb(252, 253, 253);
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#caixaPreview{
+    border: solid 1px;
+    padding: 20px;
+    margin: 8px;
+}
+
+#historico{
+    background-color: rgb(252, 253, 253);
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#listaHistorico{
+    border: solid 1px;
+    padding: 20px;
+    margin: 8px;
+}
+
+.botao{
+    background-color: rgb(164, 186, 202);
+    border-radius: 5px;
+    margin: 8px;
+    padding: 8px;
+}
+
+.botao:hover{
+    background-color: rgb(88, 156, 199);
+}
+
+/*Indicador de prioridade*/
+.prio-alta{
+    background: rgb(235, 141, 141);
+    padding:4px;
+}
+
+.prio-baixa{
+    background: rgb(44, 172, 19);
+    padding:4px;
+}
+
+.prio-normal{
+    background: rgb(230, 148, 33);
+    padding:4px;
+}
+
+/*Delay*/
+#status{
+    /*Mensagem de enviando inicia sem aparecer na tela*/
+    display:none;
+}
