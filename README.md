@@ -260,7 +260,7 @@ A: Depende da aula. Leia as instruções no README de cada exercício.
 - Descreva o erro detalhadamente
 
 **Professor:**  
-- Email: petrosbarreto01@gmail.com
+- Email: 010123028@prof.uninassau.edu.br
 - Horário de atendimento: Terças e quintas, 12:30-13:00
 
 ---

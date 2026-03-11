@@ -1,7 +1,7 @@
 name: Validar Exercício - Aula 02
 
 on:
-  pull_request:
+  pull_request_target:
     paths:
       - 'exercicios/aula02/**'
   push:
@@ -13,6 +13,9 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
     
     steps:
       - name: Checkout código
@@ -320,7 +323,7 @@ jobs:
             
             _Validação executada em: ${new Date().toLocaleString('pt-BR')}_`;
             
-            github.rest.issues.createComment({
+            await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,

@@ -1,7 +1,7 @@
 name: Validar Exercício - Aula 01
 
 on:
-  pull_request:
+  pull_request_target:
     paths:
       - 'exercicios/aula01/**'
   push:
@@ -13,7 +13,10 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    
+    permissions:
+      issues: write
+      pull-requests: write
+
     steps:
       - name: Checkout código
         uses: actions/checkout@v3

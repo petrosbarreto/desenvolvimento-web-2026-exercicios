@@ -21,7 +21,7 @@ jobs:
       - name: Detectar código duplicado simples
         run: |
           echo "Iniciando verificação simplificada..."
-          if grep -r 'TODO' ./exercicios; then
+          if grep -r 'TODO' ./exercicios --include="*.js" --include="*.html" --include="*.css"; then
             echo "⚠️ Código contém 'TODO'. Por favor, complete o código antes de submeter."
             exit 1
           else

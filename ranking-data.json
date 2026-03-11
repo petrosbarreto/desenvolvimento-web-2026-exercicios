@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "name": "Petros Barreto",
+    "scores": {
+      "aula02": 93
+    },
+    "totalScore": 93,
+    "exercisesCompleted": 1,
+    "username": "petrosbarreto",
+    "avatar": "https://avatars.githubusercontent.com/u/5005112?v=4",
+    "avgScore": "93.0"
+  }
+]

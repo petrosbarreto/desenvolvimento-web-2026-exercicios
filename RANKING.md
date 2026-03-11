@@ -1,35 +1,33 @@
 # 🏆 Ranking de Alunos - Desenvolvimento Web 2026.1
 
-**Status:** Aguardando primeiras submissões
-
----
+**Atualizado em:** 09/03/2026 02:43 UTC
 
 ## 📊 Top 20 Alunos
 
 | Posição | Aluno | Exercícios | Média | Pontuação Total |
 |---------|-------|------------|-------|-----------------|
-| - | _Nenhuma submissão ainda_ | - | - | - |
+| 🥇 | Petros Barreto | 1 | 93.0 | 93 |
 
----
 
 ## 📈 Estatísticas Gerais
 
-- **Total de alunos:** 0
-- **Exercícios submetidos:** 0
-- **Média geral da turma:** -
-
----
+- **Total de alunos:** 1
+- **Exercícios submetidos:** 1
+- **Média geral da turma:** 93.0
 
 ## 🎖️ Badges de Conquistas
 
 ### ⭐ Excelência (Média ≥ 90)
-_Nenhum aluno ainda_
+
+Petros Barreto
 
 ### 💪 Dedicação (10+ exercícios)
+
 _Nenhum aluno ainda_
 
-### 🚀 Primeira Entrega
-_Em breve_
+### 🚀 Primeira Entrega (Primeiro a submeter cada aula)
+
+_Em desenvolvimento_
 
 ---
 
@@ -44,5 +42,3 @@ _Em breve_
 ---
 
 _Ranking atualizado automaticamente toda segunda-feira._
-
-**Última atualização:** Sistema iniciado em 15/02/2026
