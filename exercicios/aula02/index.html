@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Aula 02 - Requisições HTTP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📡 Requisições HTTP - JSONPlaceholder API</h1>
+    <button id="toggle-theme">🌘Alterar tema</button>
+  </header>
+
+  <main>
+    <section id="usuarios-section">
+      <h2>Lista de Usuários</h2>
+      <button id="btn-carregar">🔄 Carregar Usuários</button>
+      <div id="loading" class="hidden">Carregando...</div>
+      <div id="usuarios-container"></div>
+    </section>
+
+    <section id="post-section">
+      <h2>Criar Novo Post</h2>
+      <form id="form-post">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" required>
+        
+        <label for="conteudo">Conteúdo:</label>
+        <textarea id="conteudo" required></textarea>
+        
+        <button type="submit">📤 Enviar Post</button>
+      </form>
+      <div id="post-resultado"></div>
+    </section>
+
+    <section id="info-section">
+      <h2>Informações da Última Requisição</h2>
+      <div id="requisicao-info">
+        <p><strong>Método:</strong> <span id="info-metodo">-</span></p>
+        <p><strong>URL:</strong> <span id="info-url">-</span></p>
+        <p><strong>Status:</strong> <span id="info-status">-</span></p>
+        <p><strong>Tempo:</strong> <span id="info-tempo">-</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Aula 02 - Desenvolvimento Web 2026.1</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
