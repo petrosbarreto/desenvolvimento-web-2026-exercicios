@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rian Alves - Desenvolvedor Full-Stack</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Oswald", sans-serif;
+      color: #171b39;
+    }
+
+    body {
+      background-image: url(https://images.pexels.com/photos/35787175/pexels-photo-35787175.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+
+    }
+    
+    body, main {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    header {
+      margin: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      border-radius: 1rem 5rem !important;
+    }
+
+    .box {
+      border-radius: 1rem ;
+      border: 3px solid #fff;
+      background-color:rgba(255, 255, 255, 0.412);
+      backdrop-filter: blur(25px) contrast(100%) opacity(50%) saturate(100%);
+    }
+
+    .boxContainer {
+      display: flex;
+      justify-content: center;
+      gap: 25%;
+    }
+
+    header p#aboutText {
+      width: 75%;
+    }
+
+    img#imageProfile {
+      width: 20%;
+      border-radius: 1rem 5rem;
+    }
+
+    header aside {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    section#hobbiesObjectives div {
+      width: 25%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .boxContainer .box h2 {
+      text-align: center;
+    }
+    
+    section#skills {
+      display: flex;
+      justify-content: center;
+    }
+    
+    section#skills div {
+      padding: 2rem;
+      width: 25%;
+    }
+
+    section#skills table {
+      width: 100%;
+      text-align: center;
+      border-collapse: collapse;
+      background-color: rgb(255, 255, 255);
+    }
+    
+    section#skills table th, section#skills table td {
+      border: 1px solid #171b39;
+      margin: 0;
+    }
+
+    footer {
+      width: 100%;
+      background-color: #fff;
+      padding: 4rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="box">
+    <img id="imageProfile" src="profile-picture.jpg" alt="Foto de Rian Alves">
+    <aside>
+      <div id="headerTitle">
+        <h1>Rian Alves</h1>
+        <h2>Estudante de Engenharia da Computação e Estagiario em Desenvolvimento Full-Stack</h2>
+      </div>
+      <div>
+        <h2>Sobre Mim</h2>
+        <p id="aboutText">
+          Olá! 👋 Me chamo Rian. Acadêmico de Engenharia da Computação na Uninassau Recife (3º período). Atualmente, foco meus estudos em desenvolvimento de software e segurança cibernética, buscando aplicar conceitos teóricos em projetos práticos e soluções seguras.
+        </p>
+      </div>
+    </aside>
+  </header>
+
+  <main>
+    <section id="hobbiesObjectives" class="boxContainer">
+      <div class="box">
+        <h2>Objetivos Profissionais</h2>
+        <ol>
+          <li>Atingir a minha estabilidade com a tecnologia &#128187;</li>
+          <li>Alcançar uma oportunidade no exterior &#128507;</li>
+          <li>Me aprofundar em Blue Team e Red Team &#128309; &#128308;</li>
+        </ol>
+      </div>
+      <div class="box">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Praticar Taekwondo &#129355;</li>
+          <li>Jogar video game &#127918;</li>
+          <li>Ler quando me sobra tempo &#128214;</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="boxContainer">
+      <div class="box">
+        <h2>Habilidades Técnicas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Habilidade</th>
+              <th>Nível</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML</td>
+              <td>Avançado</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>Avançado</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>Avançado</td>
+            </tr>
+            <tr>
+              <td>Typescript</td>
+              <td>Intermediário</td>
+            </tr>
+            <tr>
+              <td>Git</td>
+              <td>Intermediário</td>
+            </tr>
+            <tr>
+              <td>C#</td>
+              <td>Intermediário</td>
+            </tr>
+            <tr>
+              <td>SQL</td>
+              <td>Básico</td>
+            </tr>
+            <tr>
+              <td>Python</td>
+              <td>Básico</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="box">
+        <h2>Contato</h2>
+        <ul>
+          <li>Email: <a href="mailto:silent.dev007@gmail.com">silent.dev007@gmail.com</a></li>
+          <li>GitHub: <a href="https://github.com/RianAlvesAce" target="_blank">@RianAlvesAce</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/rian-alvespf/" target="_blank">Rian Pedro</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; Rian Alves 2026 - Feito com ❤️ no curso de Desenvolvimento Web - UNINASSAU</p>
+  </footer>
+</body>
+</html>
