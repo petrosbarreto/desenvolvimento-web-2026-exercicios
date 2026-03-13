@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial;
+}
+
+body{
+    background: #f1f3f1;
+    color: #333;
+}
+
+#cabeçalho{
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #4285f4;
+    font-size: 20;
+}
+
+.container{
+    width: 65%;
+    padding: 30px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    transition: 1;
+}
+
+input:focus{
+    outline: none;
+    border-color: #4285f4;
+    box-shadow:0 0 3px rgba;
+}
+
+button{
+    background-color: #4285f4;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2;
+}
+
+button:hover{
+    background-color: #2f6ad9;
+}
+
+#preview{
+    margin-top: 15;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0,0.82);
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+#historicoEmails{
+    position: fixed;
+    right: 0;
+    top: 90px;
+    width: 30%;
+    height: 85vh;
+    background: white;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#historicoEmails::before{
+    content: "Histórico de Emails";
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.emailItem{
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+    max-width: 400px;
+    word-wrap: break-word;
+}
+
+.emailItem:hover{
+    background: #eef3ff;
+}
+
+.emailItem h3{
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #1a73e8;
+}
+
+.emailItem p{
+    font-size: 14px;
+    white-space: normal;
+    color: #555;
+}
