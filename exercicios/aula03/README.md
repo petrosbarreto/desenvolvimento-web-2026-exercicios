@@ -1,4 +1,4 @@
-# 📝 Exercício Prático - Aula 03
+# 📝 Exercício Prático - Aula 03 - Maria Giulia
 
 ## 🎯 Objetivo
 
