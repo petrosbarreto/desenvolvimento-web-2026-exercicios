@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Email Client</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1> Simulador de email </h1>
+
+<div class="container">
+
+  <form id="emailForm">
+
+    <label>De:</label>
+    <input type="email" id="de" required>
+
+    <label>Para:</label>
+    <input type="text" id="para" placeholder="email1@gmail.com, email2@gmail.com" required>
+
+    <label>Cc:</label>
+    <input type="text" id="cc">
+
+    <label>Bcc:</label>
+    <input type="text" id="bcc">
+
+    <label>Assunto:</label>
+    <input type="text" id="assunto">
+
+    <label>Prioridade:</label>
+    <select id="prioridade">
+      <option value="normal">Normal</option>
+      <option value="alta">Alta</option>
+      <option value="baixa">Baixa</option>
+    </select>
+
+    <label>Corpo:</label>
+    <textarea id="corpo"></textarea>
+
+    <div class="buttons">
+      <button type="submit">Enviar</button>
+      <button type="button" id="limpar">Limpar</button>
+    </div>
+
+    <div id="status"></div>
+
+  </form>
+
+
+  <div class="preview">
+    <h2>Prévia</h2>
+    <div id="previewEmail"></div>
+  </div>
+
+</div>
+
+<h2> Histórico</h2>
+<div id="historico"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
