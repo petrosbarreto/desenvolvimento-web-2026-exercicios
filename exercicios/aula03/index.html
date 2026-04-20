@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Gerenciador de envio de e-mails</title>
+</head>
+<body>
+    <main class="bg-cyan-950 min-h-screen text-cyan-950 relative lg:flex">
+        <section class="absolute bg-black/50 h-full w-full text-white hidden justify-center items-center z-50" id="loadingContainer">
+            <div class="flex flex-col items-center gap-5">
+                <i class="fa-solid fa-spinner text-5xl"></i>
+                <p>Enviando...</p>
+            </div>
+        </section>
+        <div class="lg:w-3/4">
+            <section class="flex justify-center pt-5 px-8">
+                <input class="w-full rounded-md border border-gray-800 p-2 outline-none" 
+                   type="text" 
+                   id="searchEmail" 
+                   oninput="searchEmailByName(event)"
+                   placeholder="Pesquisar email pelo assunto">
+            </section>
+            <section id="emailsContainer" class="p-8 flex flex-col gap-2">
+                <!-- Criar botão de deletar o e-mail -->
+            </section>
+        </div>
+        <section id="formAreaDesktop" class="bg-gray-100 bottom-0 w-1/4">
+            <div class="flex justify-between items-center p-5">
+                <p class="text-lg font-semibold">Criar novo E-mail</p>
+            </div>
+
+            <form class="px-5 pb-10 text-lg flex flex-col gap-3" id="createEmailFormDesktop" onsubmit="submitFunction(event)">
+                <div>
+                    <label for="sender">De:</label>
+                    <input type="text" name="sender" id="emailSender" placeholder="fulano@email.com">
+                </div>
+                <div>
+                    <label for="receiver">Para:</label>
+                    <input type="text" name="receiver" id="emailreceiver" placeholder="fulano@gmail.com, ciclano@gmail.com ...">
+                </div>
+                <div>
+                    <label for="title">Título do e-mail:</label>
+                    <input type="text" name="title" id="emailTitle" placeholder="Assunto">
+                </div>
+                <div>
+                    <label for="content">Conteúdo e-mail:</label>
+                    <textarea name="content" 
+                              id="emailContent" 
+                              rows="5" 
+                              oninput="updatePreview(event)"
+                              placeholder="Digite entre ** ** para textos em negrito e __ __ para textos em italíco">
+                    </textarea>
+                    <p>Área de preview:</p>
+                    <div id="textPreviewDesktop" class="min-h-40 bg-gray-200 rounded-md border border-gray-700 px-2 py-3 break-all"></div>
+                </div>
+                <div>
+                    <label for="priority">Prioridade</label>
+                    <select name="priority" id="emailPriority">
+                        <option value="1" selected>Normal</option>
+                        <option value="2">Alta</option>
+                        <option value="3">Baixa</option>
+                    </select>
+                </div>
+                <div class="grid grid-cols-2 gap-5 border text-white mt-5">
+                    <button onclick="clearForm()" type="button" class="bg-cyan-800 rounded-md p-3">Limpar formulario</button>
+                    <button type="submit" class="bg-cyan-800 rounded-md p-3">Enviar E-mail</button>
+                </div>
+            </form>
+        </section>
+        <section id="formAreaMobile" class="bg-gray-100 fixed bottom-0 w-full rounded-t-xl createEmailClosed">
+            <div onclick="openCreateEmail()" class="flex justify-between items-center p-5">
+                <p class="text-lg font-semibold">Criar novo E-mail</p>
+                <i class="fa-solid fa-caret-up text-3xl mt-1"></i>
+            </div>
+
+            <form class="px-5 pb-10 text-lg flex flex-col gap-3" id="createEmailFormMobile" onsubmit="submitFunction(event)">
+                <div>
+                    <label for="sender">De:</label>
+                    <input type="text" name="sender" id="emailSender" placeholder="fulano@email.com">
+                </div>
+                <div>
+                    <label for="receiver">Para:</label>
+                    <input type="text" name="receiver" id="emailreceiver" placeholder="fulano@gmail.com, ciclano@gmail.com ...">
+                </div>
+                <div>
+                    <label for="title">Título do e-mail:</label>
+                    <input type="text" name="title" id="emailTitle" placeholder="Assunto">
+                </div>
+                <div>
+                    <label for="content">Conteúdo e-mail:</label>
+                    <textarea name="content" 
+                              id="emailContent" 
+                              rows="5" 
+                              oninput="updatePreview(event)"
+                              placeholder="Digite entre ** ** para textos em negrito e __ __ para textos em italíco">
+                    </textarea>
+                    <p>Área de preview:</p>
+                    <div id="textPreviewMobile" class="min-h-20 bg-gray-200 rounded-md border border-gray-700 px-2 py-3 break-all"></div>
+                </div>
+                <div>
+                    <label for="priority">Prioridade</label>
+                    <select name="priority" id="emailPriority">
+                        <option value="1" selected>Normal</option>
+                        <option value="2">Alta</option>
+                        <option value="3">Baixa</option>
+                    </select>
+                </div>
+                <div class="grid grid-cols-2 gap-5 border text-white mt-5">
+                    <button onclick="clearForm()" type="button" class="bg-cyan-800 rounded-md p-3">Limpar formulario</button>
+                    <button type="submit" class="bg-cyan-800 rounded-md p-3">Enviar E-mail</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="emailPreview" class="absolute w-full h-full top-0 justify-center items-center px-5 previewClosed" aria-modal="true" aria-labelledby="emailPreviewTitle">
+            <div class="absolute inset-0 bg-black/40" onclick="openClosePreview()"></div>
+            <div class="bg-slate-50 grid gap-2 rounded-xl p-5 shadow-lg shadow-gray-900 relative" id="emailContentContainer">
+                <button class="absolute top-3 right-4" type="button" onclick="openClosePreview()" aria-label="Fechar visualização de e-mail">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+                <p id="emailPreviewTitle" class="font-bold">Assunto 1</p>
+                <p id="emailPreviewSenderContainer">
+                    <span class="font-bold">De:</span> <span id="emailPreviewSender">fulano@gmail.com</span>
+                </p>
+                <p id="emailPreviewReceiverContainer" class="">
+                    <span class="font-bold">Para:</span> <span id="emailPreviewReceiver">alfredo@gmail.com, alfredo@gmail.com, alfredo@gmail.com</span>
+                </p>
+                <div class="bg-gray-300 rounded-md p-2">
+                    <p id="emailPreviewContent" class="text-justify min-h-28">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, repellat deleniti! Deleniti in maiores voluptate minima aliquam sint libero, atque, temporibus dolor facere laborum nulla? A magnam rerum dolores consectetur? 
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
