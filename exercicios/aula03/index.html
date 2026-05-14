@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simulador de Emails</title>
+</head>
+<body>
+    <header>
+        <h1>Simulador de Emails</h1>
+    </header>
+    <main class="main-conteudo">
+        <section class="section-form">
+            <form class="email-form">
+                <div class="field">
+                    <label for="from">De:</label>
+                    <input type="email" id="from" placeholder="seuemail@email.com" required>
+                </div>
+                <div class="field">
+                    <label for="to">Para:</label>
+                    <input type="text" id="to" placeholder="pessoa1@email.com, pessoa2@email.com" required>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="cc">Cc:</label>
+                        <input type="text" id="cc">
+                    </div>
+                    <div class="field">
+                        <label for="priority">Prioridade:</label>
+                        <select id="priority">
+                            <option value="low">Baixa</option>
+                            <option value="normal" selected>Normal</option>
+                            <option value="high">Alta</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject" required>
+                </div>
+                <div class="field">
+                    <label for="body">Mensagem:</label>
+                    <input type="text" id="body" required>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" id="btnSend">Enviar E-mail</button>
+                    <button type="reset" id="btnClear">Limpar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="section-preview">
+            <h2>Revisar em tempo real</h2>
+            <div id="emailPreview" class="email-card">
+                <div class="header-prev">
+                    <strong id="p-subject">Assunto do E-mail</strong>
+                    <span id="p-tag">Normal</span>
+                </div>
+                <div class="info-prev">
+                    <p><strong>De:</strong> <span id="p-from">...</span></p>
+                    <p><strong>Para:</strong> <span id="p-to">...</span></p>
+                </div>
+                <hr>
+                <div class="p-body" id="p-body">
+                    Sua mensagem aparecerá aqui.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="history-section">
+        <h2>Histórico de Enviados</h2>
+        <div id="historyList" class="history-grid"></div>
+    </section>
+
+    <div id="loadingOverlay" class="hidden">
+        <div class="spinner"></div>
+        <p>Enviando...</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
