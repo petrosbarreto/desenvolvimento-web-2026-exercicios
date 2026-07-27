@@ -1,6 +1,6 @@
 # 🏆 Ranking de Alunos - Desenvolvimento Web 2026.1
 
-**Atualizado em:** 20/07/2026 03:39 UTC
+**Atualizado em:** 27/07/2026 03:39 UTC
 
 ## 📊 Top 20 Alunos
 
