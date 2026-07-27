@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>E-mail</title>
+</head>
+<body>
+    <!-- Formulario --> <!--OK-->
+    <div id="email">
+        <h2>Novo E-mail</h2>
+        <!-- De -->
+        <label>De:</label>
+        <input type="email" id="campoDe"></input>
+
+        <!-- Para -->
+        <label>Para:</label>
+        <input type="email" id="campoPara"></input>
+
+        <!-- Cc -->
+        <label>Cc:</label>
+        <input type="email" id="campoCc"></input>
+
+        <!-- Bcc -->
+        <label>Bcc:</label>
+        <input type="email" id="campoBcc"></input>
+
+        <!-- Assunto -->
+        <label>Assunto:</label>
+        <input type="text" id="campoAssunto"></input>
+
+        <!-- Corpo -->
+        <label>Mensagem:</label>
+        <textarea id="campoMsg"></textarea>
+
+        <!-- Prioridade -->
+        <label>Prioridade:</label>
+        <select id="campoPrio">
+            <!-- value = Valor que será salvo no JS -->
+            <option value="Normal">Normal</option>
+            <option value="Alta">Alta</option>
+            <option value="Baixa">Baixa</option>
+        </select>
+    </div>
+
+    <!-- Pre-visualização -->
+    <div id="preview">
+        <h3>Preview</h3>
+        
+        <div id="caixaPreview"></div>
+    </div>
+
+    <!-- Historico -->
+    <div id="historico">
+        <h3>Historico</h3>
+        <div id="listaHistorico"></div>
+
+    </div>
+
+    <!-- Simulação -->
+     <button type="submit" id="botaoEnviar" class="botao">Simular Envio</button>
+     <button type="submit" id="botaoLimpar" class="botao">Limpar</button>
+     <button type="submit" id="botaoDeletar" class="botao">Deletar</button>
+
+    <!-- Deley -->
+     <div id="status">Enviando...</div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
