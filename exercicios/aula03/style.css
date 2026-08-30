@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+:root {
+    --priority-normal-color: #f97316;
+    --priority-high-color: #ef4444;
+    --priority-low-color: #22c55e;
+}
+
+.border-color-normal {
+    border: 5px solid var(--priority-normal-color);
+}
+.border-color-high {
+    border: 5px solid var(--priority-high-color);
+}
+.border-color-low {
+    border: 5px solid var(--priority-low-color);
+}
+
+section.createEmailClosed {
+    transform: translateY(calc(100% - 80px));
+    transition: .8s ease-in-out;
+}
+
+section.createEmailClosed i {
+    transform: rotate(0deg);
+    transition: .8s ease-in-out;
+}
+
+section.createEmailOpened i {
+    transform: rotate(180deg);
+    transition: .8s ease-in-out;
+}
+
+section.createEmailOpened {
+    transform: translateY(0);
+    transition: .8s ease-in-out;
+}
+
+:is(#createEmailFormMobile, #createEmailFormDesktop) div:has(input, textarea, select) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+:is(#createEmailFormMobile, #createEmailFormDesktop) :is(input, textarea, select) {
+    border: 1px solid #083344;
+    outline: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+} 
+
+:is(#createEmailFormMobile, #createEmailFormDesktop) :is(input:focus, textarea:focus, select:focus) {
+    border: 3px solid #046b7d;
+    outline: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+} 
+
+.previewOpened {
+    opacity: 1;
+    display: flex;
+    transition: opacity .5s ease-in-out;
+
+    @starting-style {
+        opacity: 0;
+    }
+}
+
+.previewClosed {
+    opacity: 0;
+    display: none;
+}
+
+.btnActivated {
+    background-color: #6b7280;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loadingContainer i {
+    animation: spinner 1s linear infinite;
+}
+
+@media (min-width: 1024px) {
+    #formAreaMobile {
+        display: none;
+    }
+
+    * {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    #formAreaDesktop {
+        display: none;
+    }
+}
